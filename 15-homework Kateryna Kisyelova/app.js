@@ -5,12 +5,12 @@ class Tabs {
   static CLASS_BODY = "body";
   static CLASS_ACTIVE_TAB = "active-tab";
   static CLASS_OPENED = "opened";
-  static activeIndex = 0;
 
   constructor(tabsEl) {
     this.tabsEl = tabsEl;
     this.tabs = Array.from(this.tabsEl.children[0].children);
     this.contents = Array.from(this.tabsEl.children[1].children);
+    this.activeIndex = 0;
 
     for (const tab of this.tabs) {
       tab.classList.add(Tabs.CLASS_TAB);
@@ -34,7 +34,7 @@ class Tabs {
   }
 
   activateTab() {
-    this.tabs[Tabs.activeIndex].classList.add(Tabs.CLASS_ACTIVE_TAB);
+    this.tabs[this.activeIndex].classList.add(Tabs.CLASS_ACTIVE_TAB);
   }
 
   isTab(target) {
@@ -44,19 +44,19 @@ class Tabs {
   changeContent(index) {
     if (index !== Tabs.activeIndex) {
       this.hideInactiveContent();
-      Tabs.activeIndex = index;
+      this.activeIndex = index;
       this.showActiveContent();
     }
   }
 
   hideInactiveContent() {
-    this.contents[Tabs.activeIndex].classList.remove(Tabs.CLASS_OPENED);
-    this.tabs[Tabs.activeIndex].classList.remove(Tabs.CLASS_ACTIVE_TAB);
+    this.contents[this.activeIndex].classList.remove(Tabs.CLASS_OPENED);
+    this.tabs[this.activeIndex].classList.remove(Tabs.CLASS_ACTIVE_TAB);
   }
 
   showActiveContent() {
-    this.contents[Tabs.activeIndex].classList.add(Tabs.CLASS_OPENED);
-    this.tabs[Tabs.activeIndex].classList.add(Tabs.CLASS_ACTIVE_TAB);
+    this.contents[this.activeIndex].classList.add(Tabs.CLASS_OPENED);
+    this.tabs[this.activeIndex].classList.add(Tabs.CLASS_ACTIVE_TAB);
   }
 }
 
