@@ -1,0 +1,12 @@
+.body {
+    display: none;
+    background: green;
+    width: 150px;
+    height: 100px;
+}
+.active-tab {
+    background: green; 
+}
+.opened {
+    display: block;
+}
