@@ -19,7 +19,8 @@ class Group {
   addStudent(student) {
     if (this.isStudent(student)) {
       const averageMark = student.getAverageMark();
-      this.students.push(averageMark);
+
+      this.students.push({ name: student.name, averageMark });
       return averageMark;
     }
   }
@@ -33,9 +34,10 @@ class Group {
   }
 
   getAverageMarksSum() {
-    return this.students.reduce((sum, mark) => (sum += mark));
+    return this.students.reduce((sum, student) => (sum += student.averageMark), 0);
   }
 }
+
 const group = new Group();
 
 group.addStudent(new Student("John", [10, 8]));
