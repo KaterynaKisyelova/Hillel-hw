@@ -9,7 +9,7 @@ const GITHUB_USER_INFO = [
 
 const githubForm = document.querySelector(".github-form");
 const githubContent = document.querySelector(".github-content");
-let userTemplate = document.querySelector("#github-user-template").innerHTML;
+const userTemplate = document.querySelector("#github-user-template").innerHTML;
 
 githubForm.addEventListener("submit", onGithubFormSubmit);
 
