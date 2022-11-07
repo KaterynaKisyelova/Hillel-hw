@@ -1,0 +1,56 @@
+body{
+    background:  lightgrey;
+  }
+
+.todo{
+    max-width: 405px;
+    padding: 30px;
+    margin: 137px auto;
+    background: #fff;
+    border-radius: 7px;
+  }
+
+.todo__list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    line-height: 45px;
+    margin-bottom: 8px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.button {
+    width: auto;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    background: #737575;
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.todo__input {
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: 1px solid #999;
+}
+
+.complete {
+    background: green;
+}
