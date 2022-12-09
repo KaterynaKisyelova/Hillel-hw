@@ -32,8 +32,10 @@ class Controller {
   }
 
   deleteStudent(id) {
-    this.collection.delete(id).then((res) => console.log(res.id));
-    this.tableView.removeItem(id);
+    this.collection
+      .delete(id)
+      .then((delItemId) => this.tableView.removeItem(delItemId))
+      .catch(this.showError);
   }
 
   editStudent(id, marks) {
@@ -41,7 +43,8 @@ class Controller {
       .update(id, marks)
       .then((updateStudent) =>
         this.tableView.replaceItem(updateStudent.id, updateStudent)
-      );
+      )
+      .catch(this.showError);
   }
 
   showError(error) {
