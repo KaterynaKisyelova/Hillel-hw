@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 30px;
+}
+
+.albums-list {
+    padding: 0 30px;
+    list-style-type: none;
+}
+
+.albums-list li {
+    cursor: pointer;
+}
+
+.albums-list li:hover {
+    color: blue;
+}
+
+.photos{
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(10, 150px);
+    gap: 30px 20px;
+    padding: 0 30px;
+}
