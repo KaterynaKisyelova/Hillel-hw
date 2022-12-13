@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background:  rgba(126, 228, 197, 0.075);
+}
+
+#root-students{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  width: auto;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  background: #737575;
+}
