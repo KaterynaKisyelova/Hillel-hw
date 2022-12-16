@@ -23,7 +23,7 @@ export default class WebSocketApi {
     this.options.onMessage(JSON.parse(e.data));
   }
 
-  onError() {
-    
+  onError(err) {
+    console.log(err);
   }
 }
