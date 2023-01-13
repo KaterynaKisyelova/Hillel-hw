@@ -1,0 +1,17 @@
+body {
+  background: lightgrey;
+}
+
+.todos {
+  max-width: 405px;
+  padding: 30px;
+  margin: 137px auto;
+  background: #fff;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.error {
+  color: red;
+}
