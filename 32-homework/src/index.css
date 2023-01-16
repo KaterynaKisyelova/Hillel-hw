@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.contacts-app {
+  margin: 10% auto 0 auto;
+  width: 70%;
+}
+
+.contacts-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contacts-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #d6e4e5;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.main-row {
+  margin-top: 2rem;
+  background: none;
+  font-weight: 700;
+}
+
+.cell {
+  text-align: center;
+  line-height: 3rem;
+}
+
+.btn {
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
+  background-color: #497174;
+}
+
+.delete-button {
+  background: #eb6440;
+}
+
+.message {
+  text-align: center;
+}
