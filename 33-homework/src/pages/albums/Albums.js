@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useOutletContext, useParams } from "react-router-dom";
-import AlbumItem from "../components/AlbumItem";
-import { getAlbums } from "../store/actions/users";
+import AlbumItem from "./AlbumItem";
+import { getAlbums } from "../../store/actions/users";
+import Message from "../../components/Message";
+import styles from "./Albums.module.css";
 
 function Albums() {
   const { albumsList, areAlbumsLoading } = useSelector((state) => state);
@@ -16,9 +18,11 @@ function Albums() {
 
   return (
     <>
-      {areAlbumsLoading ? <div>Loading...</div> : null}{" "}
+      {areAlbumsLoading && +userId === +currentUserId ? (
+        <Message>Loading...</Message>
+      ) : null}
       {!areAlbumsLoading && +userId === +currentUserId ? (
-        <ul className="list">
+        <ul className={styles.albums}>
           {albumsList.map((album) => (
             <AlbumItem key={album.id} album={album} />
           ))}

@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import { getUsers } from "../store/actions/users";
 import { useDispatch } from "react-redux";
-import Users from "../pages/Users";
-import Albums from "../pages/Albums";
-import Photos from "../pages/Photos";
+import Users from "../pages/users/Users";
+import Albums from "../pages/albums/Albums";
+import Photos from "../pages/photos/Photos";
 
 function App() {
   const dispatch = useDispatch();

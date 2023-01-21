@@ -39,7 +39,6 @@ export default function rootReducer(state = INITIAL_STATE, { type, payload }) {
     case SET_USER_ID_ACTION:
       return { ...state, userId: payload };
     case GET_PHOTOS_ACTION:
-      console.log(payload);
       return { ...state, photosList: payload };
     case SET_ALBUM_ID_ACTION:
       return { ...state, albumId: payload };

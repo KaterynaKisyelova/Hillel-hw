@@ -1,0 +1,9 @@
+.album {
+  padding: 10px 0;
+}
+
+.album .item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30%;
+}

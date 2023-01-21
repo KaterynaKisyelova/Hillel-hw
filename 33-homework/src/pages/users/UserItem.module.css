@@ -1,0 +1,12 @@
+.user {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+.user .item {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+  border-radius: 4px;
+}

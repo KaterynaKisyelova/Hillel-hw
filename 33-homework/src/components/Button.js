@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import styles from "./Button.module.css";
 import {
   getAlbums,
   getPhotos,
@@ -25,7 +26,11 @@ function Button({ children, id }) {
     dispatch(getPhotos(id));
   }
 
-  return <button onClick={onBtnClick}>{children}</button>;
+  return (
+    <button className={styles.btn} onClick={onBtnClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
