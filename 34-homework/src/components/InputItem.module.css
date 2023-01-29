@@ -1,0 +1,15 @@
+.form__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__item input {
+  padding: 5px 10px;
+}
+
+.error {
+  color: red;
+}
